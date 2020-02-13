@@ -1,0 +1,75 @@
+// Responsive mixins
+	// Mobile
+	@mixin mobile{@media only screen and (max-width: map-get($breakpoints, max-mobile)) and (min-width: map-get($breakpoints, min-mobile)){ @content; }}
+
+	// Tablette
+	@mixin tablette{@media only screen and (max-width: map-get($breakpoints, max-tablette)) and (min-width: map-get($breakpoints, min-tablette)){ @content; }}
+
+	// PC
+	@mixin pc{@media only screen and (max-width: map-get($breakpoints, max-pc)) and (min-width: map-get($breakpoints, min-pc)){ @content; }}
+
+// Menu mixins
+@mixin menu{
+	width: 535px; height: 760px; box-shadow: 0 0 26px #ededed; cursor: pointer; transition: ease-in-out .2s;float: left;margin-bottom: 95px; text-align: center; transition: ease-in-out .2s;
+	@include mobile{width: 306px; height: 456px; margin-bottom: 50px;}
+}
+
+//  Carte Mixins
+	// Architechture carte
+	@mixin carte{
+		width: 1180px; height: auto; box-shadow: 0 0 26px #ededed; margin-bottom: 180px; margin-top: 50px;
+		@include mobile{width: 100%;}
+		@include tablette{width: 100%;}
+		@include pc{width: 100%;}
+	}
+
+	// Espaces sections de la carte
+	@mixin carte-espace{
+		width: 300px; height: 15px; background-size: 100%; background-repeat: no-repeat; background-position: center center;
+		@include mobile{width: 100px;}
+		@include tablette{width: 200px;}
+	}
+
+	// Champ d'information de la carte
+	@mixin carte-informations{
+		padding-top: 80px; padding-left: 120px; padding-right: 120px; padding-bottom: 100px;
+		@include mobile{padding-left: 20px; padding-right: 20px; padding-bottom: 50px; padding-top: 30px;}
+		@include tablette{padding-left: 20px; padding-right: 20px; padding-bottom: 50px; padding-top: 30px;}
+		@include pc{padding-left: 50px; padding-right: 50px;}
+	}
+
+	// Section de la carte
+	@mixin carte-section{
+		margin-bottom: 120px;
+		@include mobile{margin-bottom: 30px;}
+		@include tablette{margin-bottom: 70px;}
+	}
+
+	// Titres des sections de la carte
+	@mixin carte-titre{
+		margin: 0; width: calc(100% - 600px); text-align: center; font-size: 26px; margin-top: -10px;
+		@include mobile{width: calc(100% - 200px); font-size: 14px;margin-top: -5px;}
+		@include tablette{width: calc(100% - 400px); font-size: 20px;}
+	}
+
+	// Soulignements des titres des sections de la carte
+	@mixin carte-soulignement{
+		display: inline-block;
+		&::before{content: ""; position: relative; top: 35px;display: block;height: 2px;width:0;transition: ease-in-out .4s;@include mobile{top: 20px; height: 1px;}}
+		&:hover::before{width: 100%;}
+	}
+
+	// Listes des menus de la carte et leur mise en pager
+	@mixin carte-liste{
+		font-size: 20px; margin-top: 50px;
+		@include mobile{font-size: 14px; margin: 0;}
+		@include tablette{font-size: 15px;}
+	}
+	@mixin carte-ul{list-style: none; padding: 0; margin: 0; line-height: 40px;}
+	@mixin carte-li{display: flex; justify-content: space-between;}
+
+
+
+
+
+

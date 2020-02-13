@@ -1,0 +1,330 @@
+// Carte
+section.carte{
+	> h1{font-size: 42px; text-align: center; color: #353535; padding: 0; margin: 0; @include mobile{font-size: 25px;}}
+	> article.carte{
+		@include carte;
+
+		// Carte 1
+		&.carte-1{
+			background: $couleur-menu-1;
+
+			// Champ d'informations de la carte
+			> .informations {
+				@include carte-informations;
+
+				// Titre de la carte
+				> .titre{
+					text-align: center;
+
+					> h2{
+						font-family: 'Ma Shan Zheng'; font-size: 50px; color: #000; text-align: center; margin: 0px; font-weight: normal;margin-bottom: 75px;
+						@include tablette{font-size: 35px;}
+						@include mobile{font-size: 35px;}
+					}
+
+					> i{
+						@include tablette{font-size: 5em;}
+						@include mobile{font-size: 4em;}
+					}
+				}
+
+				// Sections de la carte
+				> section{
+					@include carte-section;
+
+					// Titre de la section
+					> .titre{
+						display: flex;
+
+						// Espaces sur les côtés du titre
+						> div.espace{
+							&.espace-1{background: url('../img/1-space-1.png'); @include carte-espace;}
+							&.espace-2{background: url('../img/1-space-2.png'); @include carte-espace;}							
+						}
+
+						// Titre
+						> h3{
+							font-family: 'Comic Sans MS'; font-style: italic; font-weight: 200;
+							@include carte-titre;
+
+							// Soulignement du titre
+							> span{
+								@include carte-soulignement;
+								&::before {background-color: #ff485c;}
+							}
+						}
+					}
+
+					// Liste de menus de la section
+					> .liste{
+						@include carte-liste;
+						font-style: italic; font-family: 'Comic Sans MS';
+
+						// Champ de la liste
+						> ul{
+							@include carte-ul;
+
+							// Liste
+							> li{
+								@include carte-li;
+
+								// Côté gauche et droit de la liste
+								> .plat{font-weight: 100;}
+								> .prix{font-weight: 400;}
+							}
+						}
+					}
+				}
+
+				// Footer de la carte
+				> section.footer {
+					text-align: center; margin-bottom: 0px;
+
+					// Icone du footer
+					> i{
+						margin-right: 15px;
+						@include mobile{font-size: 2em;}
+						@include tablette{font-size: 3em;}
+					}
+
+					// Nom de la carte
+					> h2{
+						display: inline; font-family: 'Ma Shan Zheng'; font-size: 40px; color: #000; text-align: center; margin: 0px; font-weight: normal;margin-bottom: 75px;
+						@include mobile{font-size: 20px;}
+						@include tablette{font-size: 30px;}
+					}
+				}
+			}	
+		}
+
+		// Carte 2
+		&.carte-2{
+			background: $couleur-menu-2;
+
+			// Champ d'informations de la carte
+			> .informations {
+				@include carte-informations;
+
+				// Titre de la carte
+				> .titre{
+					text-align: center;
+
+					> h2{
+						font-family: 'Rozha One'; font-size: 50px; background: -webkit-linear-gradient(65deg, #e38913, #8F5AFF 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-align: center; margin: 0px; font-weight: normal;margin-bottom: 75px;
+						@include tablette{font-size: 35px;}
+						@include mobile{font-size: 35px;}
+					}
+
+					> i{
+						@include tablette{font-size: 5em;}
+						@include mobile{font-size: 4em;}
+					}
+				}
+
+				// Sections de la carte
+				> section{
+					@include carte-section;
+
+					// Titre de la section
+					> .titre{
+						display: flex;
+
+						// Espaces sur les côtés du titre
+						> div.espace{
+							&.espace-1{background: url('../img/2-space-1.png'); @include carte-espace;}
+							&.espace-2{background: url('../img/2-space-2.png'); @include carte-espace;}
+							&.espace-3{background: url('../img/2-space-3.png'); @include carte-espace;}
+						}
+
+						// Titre
+						> h3{
+							font-family: 'Rozha One'; font-weight: 200;
+							@include carte-titre;
+
+							// Soulignement du titre
+							> span{
+								@include carte-soulignement;
+								&::before {background-color: #c77213;}
+							}
+						}
+					}
+
+					// Liste de menus de la section
+					> .liste{
+						@include carte-liste;
+						font-family: 'Roboto';
+
+						// Champ de la liste
+						> ul{
+							@include carte-ul;
+
+							// Liste
+							> li{
+								@include carte-li;
+
+								// Côté gauche et droit de la liste
+								> .plat{font-weight: 100;}
+								> .prix{font-weight: 100;}
+							}
+						}
+					}
+
+					// Différentes couleurs des titres et paragraphes
+					&.entree h3, &.entree{color: #c67412;}
+					&.repas h3, &.repas li{color: #a56799;}
+					&.dessert h3, &.dessert{color: #6e4ccc;}		
+				}		
+			}	
+		}
+
+		// Carte 3
+		&.carte-3{
+			background: $couleur-menu-3;
+
+			// Champ d'informations de la carte
+			> .informations {
+				@include carte-informations;
+
+				// Titre de la carte
+				> .titre{
+					text-align: center;
+
+					> h2{
+						font-family: 'Dancing Script'; font-size: 50px; background: -webkit-linear-gradient(45deg, #023ae3, #0887fb 90%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-align: center; margin: 0px; font-weight: normal;margin-bottom: 75px;
+						@include tablette{font-size: 35px;}
+						@include mobile{font-size: 35px;}
+					}
+
+					> i{
+						@include tablette{font-size: 5em;}
+						@include mobile{font-size: 4em;}
+					}
+				}
+
+				// Sections de la carte
+				> section{
+					@include carte-section;
+
+					// Titre de la section
+					> .titre{
+						display: flex;
+
+						// Espaces sur les côtés du titre
+						> div.espace{
+							&.espace-1{background: url('../img/3-space-1.png'); @include carte-espace;}
+							&.espace-2{background: url('../img/3-space-2.png'); @include carte-espace;}
+							&.espace-3{background: url('../img/3-space-3.png'); @include carte-espace;}
+						}
+
+						// Titre
+						> h3{
+							font-family: 'Kalam'; font-weight: 200; color: #000;
+							@include carte-titre;
+
+							// Soulignement du titre
+							> span{
+								@include carte-soulignement;
+								&::before {background-color: #0787fb;}
+							}
+						}
+					}
+
+					// Liste de menus de la section
+					> .liste{
+						@include carte-liste;
+						font-family: 'Kalam';
+
+						// Champ de la liste
+						> ul{
+							@include carte-ul;
+
+							// Liste
+							> li{
+								@include carte-li;
+								color: #000;
+
+								// Côté gauche et droit de la liste
+								> .plat{font-weight: 100;}
+								> .prix{font-weight: 400;}
+							}
+						}
+					}	
+				}		
+			}	
+		}
+
+		// Carte 4
+		&.carte-4{
+			background: $couleur-menu-4;
+
+			// Champ d'informations de la carte
+			> .informations {
+				@include carte-informations;
+
+				// Titre de la carte
+				> .titre{
+					text-align: center;
+
+					> h2{
+						font-family: 'Kaushan Script'; font-size: 50px; background: -webkit-linear-gradient(45deg, #58a949, #bfff81 90%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-align: center; margin: 0px; font-weight: normal;margin-bottom: 75px;
+						@include tablette{font-size: 35px;}
+						@include mobile{font-size: 35px;}
+					}
+
+					> i{
+						@include tablette{font-size: 5em;}
+						@include mobile{font-size: 4em;}
+					}
+				}
+
+				// Sections de la carte
+				> section{
+					@include carte-section;
+
+					// Titre de la section
+					> .titre{
+						display: flex;
+
+						// Espaces sur les côtés du titre
+						> div.espace{
+							&.espace-1{background: url('../img/4-space-1.png'); @include carte-espace;}
+						}
+
+						// Titre
+						> h3{
+							font-family: 'Kalam'; font-weight: 200; color: #000;
+							@include carte-titre;
+
+							// Soulignement du titre
+							> span{
+								@include carte-soulignement;
+								&::before {background-color: #8eed5c;}
+							}
+						}
+					}
+
+					// Liste de menus de la section
+					> .liste{
+						@include carte-liste;
+						font-family: 'Kalam';
+
+						// Champ de la liste
+						> ul{
+							@include carte-ul;
+
+							// Liste
+							> li{
+								@include carte-li;
+								color: #000;
+
+								// Côté gauche et droit de la liste
+								> .plat{font-weight: 100;}
+								> .prix{font-weight: 400;}
+							}
+						}
+					}	
+				}		
+			}	
+		}								
+	}
+}

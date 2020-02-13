@@ -1,0 +1,18 @@
+// Responsive
+$breakpoints: (
+	min-mobile: 320px,
+	max-mobile: 774px,
+	min-tablette: 775px,
+	max-tablette: 979px,
+	min-pc: 980px,
+	max-pc: 1200px,
+);
+
+// Couleurs
+$couleur-principale: #579c87;
+$couleur-secondaire: #fdcb46;
+	// Couleurs des menus
+	$couleur-menu-1: #fcdfdb;
+	$couleur-menu-2: #fff5fe;
+	$couleur-menu-3: #f9f9f9;
+	$couleur-menu-4: #fdfffd;

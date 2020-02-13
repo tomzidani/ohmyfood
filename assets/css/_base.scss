@@ -1,0 +1,75 @@
+// Global
+*{text-decoration: none;}
+body{margin: 0; font-family: 'Roboto', sans-serif;}
+
+// Alignements
+.gauche{float: left;}
+.droite{float: right;}
+.reverse{transform: scaleX(-1);}
+
+// Header
+header{
+	padding-top: 80px; padding-bottom: 80px; width: 100%; background: $couleur-principale; border-bottom: solid 2px #a1c181; margin-bottom: 100px;
+	@include mobile{margin-bottom: 50px;}
+
+	// Nom de l'entreprise
+	> h1 {
+		text-align: center; font-size: 71px; font-family: 'Montserrat'; font-weight: 800; color: $couleur-secondaire; margin: 0; padding: 0;
+		@include mobile{font-size: 51px;}
+
+		> a {color: $couleur-secondaire;}
+	}
+}
+
+// Contenu de la page
+.contenu{
+	max-width: 1200px; width: 100%; margin-left: auto; margin-right: auto;
+}
+
+// Prochainement
+section.prochainement{
+	text-align: center; margin-bottom: 185px;
+	@include mobile{margin-bottom: 100px;}
+
+	// Encadré texte
+	> span {
+		padding-top: 30px; padding-bottom: 30px; padding-left: 100px; padding-right: 100px; border-radius: 15px; color: $couleur-secondaire; font-size: 44px; background: $couleur-principale; font-weight: 100;
+		@include mobile{font-size: 20px; padding-left: 90px; padding-right: 90px;}
+	}
+
+	// Champ de points de suspensions
+	> .points {
+		width: 350px; margin: 0 auto; display: flex;
+		@include mobile{width: 250px;}
+
+		// Points de suspension
+		> .point{
+			width: 70px; height: 70px; border-radius: 100%; background: #cecece; margin: 50px auto;
+			@include mobile{width: 50px; height: 50px;}
+			&.point-1{animation: 1s ease-in-out 0s infinite suspensions;}
+			&.point-2{animation: 1s ease-in-out 0.5s infinite suspensions;}
+			&.point-3{animation: 1s ease-in-out 1s infinite suspensions;}
+		}
+	}
+}
+
+// Footer
+footer{
+	width: 100%; background: $couleur-principale; position: fixed; bottom: 0px; display: flex; justify-content: space-between; border-top: solid 2px #a1c181;
+
+	// Liens textes
+	> a > span{
+		color: $couleur-secondaire; font-size: 40px; font-weight: 100; padding-top: 50px; padding-bottom: 50px; margin-left: 50px; margin-right: 50px; display: block;
+		@include tablette{font-size: 30px; margin-left: 20px; margin-right: 20px;}
+		@include mobile{font-size: 15px; margin-left: 20px; margin-right: 20px;}
+		&:hover{animation: ease-in-out 2s infinite wiggle;}
+	}
+}
+
+// Icônes
+i.fa-itunes-note{background: -webkit-linear-gradient(45deg, #ff3c5b, #ff8d63 80%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
+
+// Animations
+@keyframes suspensions{0%{opacity: 1;} 50%{opacity: 0.5;} 100%{opacity: 1;}}
+@keyframes wiggle {0% {transform: rotate(0deg);}25% {transform: rotate(-5deg);}50% {transform: rotate(5deg);}75% {transform: rotate(-5deg);}100% {transform: rotate(0deg);}}
+

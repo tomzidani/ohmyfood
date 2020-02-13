@@ -1,0 +1,34 @@
+// Menus
+.menu{
+	@include menu;
+	@include mobile{margin-left: auto; margin-right: auto !important; float: none;}
+	@include tablette{margin-left: auto; margin-right: auto !important; float: none;}
+	@include pc{margin-left: auto; margin-right: auto !important; float: none;}
+	&:hover{opacity: 0.7;}
+	&:hover .informations{transform: scale(1.2);}
+	> .informations{
+		position: relative; top: 300px; transition: ease-in-out .2s;
+		@include mobile{top: 150px;}
+	}
+	&.menu-1{
+		background: $couleur-menu-1;margin-right: 100px;
+		> .informations > i{@include mobile{font-size: 4em;}}
+		> .informations > h2{font-family: 'Ma Shan Zheng'; font-size: 43px; color: #000; text-align: center; margin: 0px; font-weight: normal; @include mobile{font-size: 35px;}}
+		> .informations > h3{font-family: 'Comic Sans MS'; font-size: 60px; color: #000; font-style: italic; font-weight: normal; text-transform: uppercase; margin-top: 40px; @include mobile{font-size: 40px;}}
+	}
+	&.menu-2{
+		background: $couleur-menu-2;
+		> .informations > h2{font-family: 'Rozha One'; font-size: 40px; background: -webkit-linear-gradient(45deg, #C77313, #8F5AFF 90%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-align: center; @include mobile{font-size: 28px;}}
+		> .informations > h3{font-family: 'Rozha One'; font-size: 70px; color: #C77313; margin-top: 40px; @include mobile{font-size: 50px;}}
+	}
+	&.menu-3{
+		background: $couleur-menu-3;margin-right: 100px;
+		> .informations > h2{font-family: 'Dancing Script'; font-size: 55px; font-weight: 100; background: -webkit-linear-gradient(45deg, #023ae3, #0887fb 90%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-align: center; @include mobile{font-size: 35px;}}
+		> .informations > h3{font-family: 'Kalam'; font-size: 70px; color: #0887fb; text-align: center; margin-top: 40px; @include mobile{font-size: 50px;}}
+	}
+	&.menu-4{
+		background: $couleur-menu-4;
+		> .informations > h2{font-family: 'Kaushan Script'; font-size: 55px; background: -webkit-linear-gradient(45deg, #58a949, #bfff81 90%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-align: center; @include mobile{font-size: 35px;}}
+		> .informations > h3{font-family: 'Kalam'; font-size: 70px; color: #72bf56; text-align: center; margin-top: 40px; @include mobile{font-size: 50px;}}
+	}
+}
