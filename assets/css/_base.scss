@@ -9,12 +9,12 @@ body{margin: 0; font-family: 'Roboto', sans-serif;}
 
 // Header
 header{
-	padding-top: 80px; padding-bottom: 80px; width: 100%; background: $couleur-principale; border-bottom: solid 2px #a1c181; margin-bottom: 100px;
+	padding-top: 60px; padding-bottom: 60px; width: 100%; background: $couleur-principale; border-bottom: solid 2px #a1c181; margin-bottom: 100px;
 	@include mobile{margin-bottom: 50px;}
 
 	// Nom de l'entreprise
 	> h1 {
-		text-align: center; font-size: 71px; font-family: 'Montserrat'; font-weight: 800; color: $couleur-secondaire; margin: 0; padding: 0;
+		text-align: center; font-size: 45px; font-family: 'Montserrat'; font-weight: 800; color: $couleur-secondaire; margin: 0; padding: 0;
 		@include mobile{font-size: 51px;}
 
 		> a {color: $couleur-secondaire;}
@@ -33,7 +33,7 @@ section.prochainement{
 
 	// Encadré texte
 	> span {
-		padding-top: 30px; padding-bottom: 30px; padding-left: 100px; padding-right: 100px; border-radius: 15px; color: $couleur-secondaire; font-size: 44px; background: $couleur-principale; font-weight: 100;
+		padding-top: 30px; padding-bottom: 30px; padding-left: 100px; padding-right: 100px; border-radius: 15px; color: $couleur-secondaire; font-size: 30px; background: $couleur-principale; font-weight: 100;
 		@include mobile{font-size: 20px; padding-left: 90px; padding-right: 90px;}
 	}
 
@@ -59,7 +59,7 @@ footer{
 
 	// Liens textes
 	> a > span{
-		color: $couleur-secondaire; font-size: 40px; font-weight: 100; padding-top: 50px; padding-bottom: 50px; margin-left: 50px; margin-right: 50px; display: block;
+		color: $couleur-secondaire; font-size: 25px; font-weight: 100; padding-top: 30px; padding-bottom: 30px; margin-left: 50px; margin-right: 50px; display: block;
 		@include tablette{font-size: 30px; margin-left: 20px; margin-right: 20px;}
 		@include mobile{font-size: 15px; margin-left: 20px; margin-right: 20px;}
 		&:hover{animation: ease-in-out 2s infinite wiggle;}
