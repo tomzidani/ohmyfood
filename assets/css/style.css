@@ -13,7 +13,9 @@ body {
   float: right; }
 
 .reverse {
-  transform: scaleX(-1); }
+  -webkit-transform: scaleX(-1);
+      -ms-transform: scaleX(-1);
+          transform: scaleX(-1); }
 
 header {
   padding-top: 60px;
@@ -69,6 +71,8 @@ section.prochainement {
   section.prochainement > .points {
     width: 350px;
     margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex; }
     @media only screen and (max-width: 774px) and (min-width: 320px) {
       section.prochainement > .points {
@@ -84,19 +88,26 @@ section.prochainement {
           width: 50px;
           height: 50px; } }
       section.prochainement > .points > .point.point-1 {
-        animation: 1s ease-in-out 0s infinite suspensions; }
+        -webkit-animation: 1s ease-in-out 0s infinite suspensions;
+                animation: 1s ease-in-out 0s infinite suspensions; }
       section.prochainement > .points > .point.point-2 {
-        animation: 1s ease-in-out 0.5s infinite suspensions; }
+        -webkit-animation: 1s ease-in-out 0.5s infinite suspensions;
+                animation: 1s ease-in-out 0.5s infinite suspensions; }
       section.prochainement > .points > .point.point-3 {
-        animation: 1s ease-in-out 1s infinite suspensions; }
+        -webkit-animation: 1s ease-in-out 1s infinite suspensions;
+                animation: 1s ease-in-out 1s infinite suspensions; }
 
 footer {
   width: 100%;
   background: #579c87;
   position: fixed;
   bottom: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   border-top: solid 2px #a1c181; }
   footer > a > span {
     color: #fdcb46;
@@ -118,12 +129,21 @@ footer {
         margin-left: 20px;
         margin-right: 20px; } }
     footer > a > span:hover {
-      animation: ease-in-out 2s infinite wiggle; }
+      -webkit-animation: ease-in-out 2s infinite wiggle;
+              animation: ease-in-out 2s infinite wiggle; }
 
 i.fa-itunes-note {
   background: -webkit-linear-gradient(45deg, #ff3c5b, #ff8d63 80%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; }
+
+@-webkit-keyframes suspensions {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0.5; }
+  100% {
+    opacity: 1; } }
 
 @keyframes suspensions {
   0% {
@@ -132,22 +152,46 @@ i.fa-itunes-note {
     opacity: 0.5; }
   100% {
     opacity: 1; } }
+@-webkit-keyframes wiggle {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  25% {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg); }
+  50% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg); }
+  75% {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg); }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); } }
 @keyframes wiggle {
   0% {
-    transform: rotate(0deg); }
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
   25% {
-    transform: rotate(-5deg); }
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg); }
   50% {
-    transform: rotate(5deg); }
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg); }
   75% {
-    transform: rotate(-5deg); }
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg); }
   100% {
-    transform: rotate(0deg); } }
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); } }
 .menu {
   width: 535px;
   height: 760px;
-  box-shadow: 0 0 26px #ededed;
+  -webkit-box-shadow: 0 0 26px #ededed;
+          box-shadow: 0 0 26px #ededed;
   cursor: pointer;
+  -webkit-transition: ease-in-out .2s;
+  -o-transition: ease-in-out .2s;
   transition: ease-in-out .2s;
   float: left;
   margin-bottom: 95px;
@@ -176,10 +220,14 @@ i.fa-itunes-note {
   .menu:hover {
     opacity: 0.7; }
   .menu:hover .informations {
-    transform: scale(1.2); }
+    -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+            transform: scale(1.2); }
   .menu > .informations {
     position: relative;
     top: 300px;
+    -webkit-transition: ease-in-out .2s;
+    -o-transition: ease-in-out .2s;
     transition: ease-in-out .2s; }
     @media only screen and (max-width: 774px) and (min-width: 320px) {
       .menu > .informations {
@@ -288,7 +336,8 @@ section.carte > h1 {
 section.carte > article.carte {
   width: 1180px;
   height: auto;
-  box-shadow: 0 0 26px #ededed;
+  -webkit-box-shadow: 0 0 26px #ededed;
+          box-shadow: 0 0 26px #ededed;
   margin-bottom: 180px;
   margin-top: 50px; }
   @media only screen and (max-width: 774px) and (min-width: 320px) {
@@ -354,6 +403,8 @@ section.carte > article.carte {
           section.carte > article.carte.carte-1 > .informations > section {
             margin-bottom: 70px; } }
         section.carte > article.carte.carte-1 > .informations > section > .titre {
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex; }
           section.carte > article.carte.carte-1 > .informations > section > .titre > div.espace.espace-1 {
             background: url("../img/1-space-1.png");
@@ -408,6 +459,8 @@ section.carte > article.carte {
                 display: block;
                 height: 2px;
                 width: 0;
+                -webkit-transition: ease-in-out .4s;
+                -o-transition: ease-in-out .4s;
                 transition: ease-in-out .4s; }
                 @media only screen and (max-width: 774px) and (min-width: 320px) {
                   section.carte > article.carte.carte-1 > .informations > section > .titre > h3 > span::before {
@@ -435,8 +488,12 @@ section.carte > article.carte {
             margin: 0;
             line-height: 40px; }
             section.carte > article.carte.carte-1 > .informations > section > .liste > ul > li {
+              display: -webkit-box;
+              display: -ms-flexbox;
               display: flex;
-              justify-content: space-between; }
+              -webkit-box-pack: justify;
+                  -ms-flex-pack: justify;
+                      justify-content: space-between; }
               section.carte > article.carte.carte-1 > .informations > section > .liste > ul > li > .plat {
                 font-weight: 100; }
               section.carte > article.carte.carte-1 > .informations > section > .liste > ul > li > .prix {
@@ -523,6 +580,8 @@ section.carte > article.carte {
           section.carte > article.carte.carte-2 > .informations > section {
             margin-bottom: 70px; } }
         section.carte > article.carte.carte-2 > .informations > section > .titre {
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex; }
           section.carte > article.carte.carte-2 > .informations > section > .titre > div.espace.espace-1 {
             background: url("../img/2-space-1.png");
@@ -589,6 +648,8 @@ section.carte > article.carte {
                 display: block;
                 height: 2px;
                 width: 0;
+                -webkit-transition: ease-in-out .4s;
+                -o-transition: ease-in-out .4s;
                 transition: ease-in-out .4s; }
                 @media only screen and (max-width: 774px) and (min-width: 320px) {
                   section.carte > article.carte.carte-2 > .informations > section > .titre > h3 > span::before {
@@ -615,8 +676,12 @@ section.carte > article.carte {
             margin: 0;
             line-height: 40px; }
             section.carte > article.carte.carte-2 > .informations > section > .liste > ul > li {
+              display: -webkit-box;
+              display: -ms-flexbox;
               display: flex;
-              justify-content: space-between; }
+              -webkit-box-pack: justify;
+                  -ms-flex-pack: justify;
+                      justify-content: space-between; }
               section.carte > article.carte.carte-2 > .informations > section > .liste > ul > li > .plat {
                 font-weight: 100; }
               section.carte > article.carte.carte-2 > .informations > section > .liste > ul > li > .prix {
@@ -683,6 +748,8 @@ section.carte > article.carte {
           section.carte > article.carte.carte-3 > .informations > section {
             margin-bottom: 70px; } }
         section.carte > article.carte.carte-3 > .informations > section > .titre {
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex; }
           section.carte > article.carte.carte-3 > .informations > section > .titre > div.espace.espace-1 {
             background: url("../img/3-space-1.png");
@@ -750,6 +817,8 @@ section.carte > article.carte {
                 display: block;
                 height: 2px;
                 width: 0;
+                -webkit-transition: ease-in-out .4s;
+                -o-transition: ease-in-out .4s;
                 transition: ease-in-out .4s; }
                 @media only screen and (max-width: 774px) and (min-width: 320px) {
                   section.carte > article.carte.carte-3 > .informations > section > .titre > h3 > span::before {
@@ -776,8 +845,12 @@ section.carte > article.carte {
             margin: 0;
             line-height: 40px; }
             section.carte > article.carte.carte-3 > .informations > section > .liste > ul > li {
+              display: -webkit-box;
+              display: -ms-flexbox;
               display: flex;
-              justify-content: space-between;
+              -webkit-box-pack: justify;
+                  -ms-flex-pack: justify;
+                      justify-content: space-between;
               color: #000; }
               section.carte > article.carte.carte-3 > .informations > section > .liste > ul > li > .plat {
                 font-weight: 100; }
@@ -839,6 +912,8 @@ section.carte > article.carte {
           section.carte > article.carte.carte-4 > .informations > section {
             margin-bottom: 70px; } }
         section.carte > article.carte.carte-4 > .informations > section > .titre {
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex; }
           section.carte > article.carte.carte-4 > .informations > section > .titre > div.espace.espace-1 {
             background: url("../img/4-space-1.png");
@@ -880,6 +955,8 @@ section.carte > article.carte {
                 display: block;
                 height: 2px;
                 width: 0;
+                -webkit-transition: ease-in-out .4s;
+                -o-transition: ease-in-out .4s;
                 transition: ease-in-out .4s; }
                 @media only screen and (max-width: 774px) and (min-width: 320px) {
                   section.carte > article.carte.carte-4 > .informations > section > .titre > h3 > span::before {
@@ -906,12 +983,14 @@ section.carte > article.carte {
             margin: 0;
             line-height: 40px; }
             section.carte > article.carte.carte-4 > .informations > section > .liste > ul > li {
+              display: -webkit-box;
+              display: -ms-flexbox;
               display: flex;
-              justify-content: space-between;
+              -webkit-box-pack: justify;
+                  -ms-flex-pack: justify;
+                      justify-content: space-between;
               color: #000; }
               section.carte > article.carte.carte-4 > .informations > section > .liste > ul > li > .plat {
                 font-weight: 100; }
               section.carte > article.carte.carte-4 > .informations > section > .liste > ul > li > .prix {
                 font-weight: 400; }
-
-/*# sourceMappingURL=style.css.map */
