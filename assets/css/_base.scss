@@ -32,23 +32,18 @@ section.prochainement{
 	@include mobile{margin-bottom: 100px;}
 
 	// Encadré texte
-	> span {
-		padding-top: 30px; padding-bottom: 30px; padding-left: 100px; padding-right: 100px; border-radius: 15px; color: $couleur-secondaire; font-size: 30px; background: $couleur-principale; font-weight: 100;
+	> div.prochainement {
+		padding-top: 30px; padding-bottom: 30px; padding-left: 100px; padding-right: 100px; border-radius: 15px; color: $couleur-secondaire; font-size: 30px; background: $couleur-principale; font-weight: 100; display: inline-flex;
 		@include mobile{font-size: 20px; padding-left: 90px; padding-right: 90px;}
-	}
+		> div.points{
+			display: flex; margin-top: 15px; margin-left: 10px;
+			> div.point{
+				width: 15px; height: 15px; border-radius: 100%; background: $couleur-secondaire; margin-right: 5px;
+				&.point-1{animation: 1s ease-in-out 0s infinite suspensions;}
+				&.point-2{animation: 1s ease-in-out 0.5s infinite suspensions;}
+				&.point-3{animation: 1s ease-in-out 1s infinite suspensions;}				
+			}
 
-	// Champ de points de suspensions
-	> .points {
-		width: 350px; margin: 0 auto; display: flex;
-		@include mobile{width: 250px;}
-
-		// Points de suspension
-		> .point{
-			width: 70px; height: 70px; border-radius: 100%; background: #cecece; margin: 50px auto;
-			@include mobile{width: 50px; height: 50px;}
-			&.point-1{animation: 1s ease-in-out 0s infinite suspensions;}
-			&.point-2{animation: 1s ease-in-out 0.5s infinite suspensions;}
-			&.point-3{animation: 1s ease-in-out 1s infinite suspensions;}
 		}
 	}
 }
